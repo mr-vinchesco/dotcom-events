@@ -33,7 +33,8 @@
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.INTERNET",
-        "android.permission.ACCESS_NETWORK_STATE"
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.RECORD_AUDIO"
       ],
       "package": "com.dotcomevents.app",
       "versionCode": 1
@@ -48,6 +49,12 @@
           "cameraPermission": "DotCom Events needs camera access to scan QR codes on event tickets."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "c75f602f-4349-433d-b279-16502c9afe51"
+      }
+    },
+    "owner": "mr-vinchesco"
   }
 }
