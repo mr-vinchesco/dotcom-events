@@ -39,9 +39,3 @@ jobs:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
     
       # 6. Upload logs
-      - name: Upload logs
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: eas-build-logs
-          path: .eas
