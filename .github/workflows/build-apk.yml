@@ -34,9 +34,9 @@ jobs:
 
       # 5. Build APK (EAS Cloud Build)
       - name: Build APK
-        run: eas build --platform android --profile preview --non-interactive --wait
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+  run: eas build --platform android --profile preview --non-interactive --wait
+  env:
+    EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       # 6. Upload logs
       - name: Upload logs
