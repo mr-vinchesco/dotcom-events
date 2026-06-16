@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "DotCom Events",
+    "slug": "dotcom-events",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1A1A2E"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dotcomevents.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "DotCom Events needs camera access to scan QR codes on event tickets.",
+        "NSPhotoLibraryUsageDescription": "DotCom Events needs photo library access to scan QR codes from images."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0ABFBC"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE"
+      ],
+      "package": "com.dotcomevents.app",
+      "versionCode": 1
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "DotCom Events needs camera access to scan QR codes on event tickets."
+        }
+      ]
+    ]
+  }
+}
