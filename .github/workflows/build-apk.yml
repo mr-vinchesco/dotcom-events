@@ -28,25 +28,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # 4. Install EAS CLI (correct tool)
+      # 4. Install EAS CLI
       - name: Install EAS CLI
         run: npm install -g eas-cli
 
-      # 5. Login to Expo
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-
-      # 6. Ensure EAS config exists
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-
-      # 7. Build APK (cloud build)
+      # 5. Build APK (EAS Cloud Build)
       - name: Build APK
         run: eas build --platform android --profile preview --non-interactive --wait
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
-      # 8. Upload build artifacts (logs only)
+      # 6. Upload logs
       - name: Upload logs
         if: always()
         uses: actions/upload-artifact@v4
