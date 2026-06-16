@@ -41,7 +41,7 @@ jobs:
 
       # 6. Install project dependencies
       - name: Install dependencies
-        run: npm ci install
+        run: npm install
 
       # 7. Build APK locally using Expo's prebuild + Gradle
       - name: Prebuild Android
