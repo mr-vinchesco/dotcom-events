@@ -37,8 +37,6 @@ jobs:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       # 6. Ensure EAS config exists
-      - name: Configure EAS
-        run: eas build:configure
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
